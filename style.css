@@ -1,0 +1,14 @@
+ div.cities {
+    background-color: grey;
+    color: white;
+    font-size: 120%;
+    margin: 0;
+    padding: 5px;
+}
+ div.tltip {
+    background-color: white;
+    color: black;
+    margin: 20px 0 20px 0l
+    padding: 20px;
+}
+ 

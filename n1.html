@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Nino's Javascript tool-test Porfolio 
+</title>
+<style>
+<link href="style.css" type="text/css" rel="stylesheet">
+</style>
+</head>
+<body>
+
+//<!--This is my title-->//
+  <div class="tltip">
+    <h1 style="background-color:black; color:white;margin: 20px 0 20px 0l;padding: 20px;">Nino's Javascript tool-test Porfolio</h1>
+    <h2>My First JavaScript</h2>
+
+//<!--This is my clock-->//    
+  <button type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()">
+      Click me to display Date and Time.</button>
+    <p id="demo"></p>
+  </div>
+ </br>
+
+//<!--This is a tooltip for a dynamic image-->//
+  <div class="cities">
+    <ol>
+     <p>Using JS to change HTML attributes</p>
+     <p>The first gif image is "pic_bulbon.gif"</p>
+     <p>The second image is "pic_bulboff.gif"</p>
+    </ol>
+  </div>
+
+//<!--This is a dynamic image-->//
+//<!--Button triggering image event-->//
+  <div>
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+  </div>
+  <div id="slideshow">
+    <script language="JavaScript">
+        var Connect = new XMLHttpRequest();
+        Connect.open("GET", "atikkrss.xml", false);
+        Connect.setREquestHeader("Content-Type","text/xml");
+        Connect.send(null);
+        var TheDocument = Connect.responseXML;
+        var atikkrss = TheDocument.childNodes[0];
+        for (var i=0;i<atikkrss.children.length; i++)
+        {
+          var atikk = atikkrss.children[i];
+          var description = atikkrss.getElementsByTagName("description")
+          document.write("<tr><td>");
+          document.write(description[0].textContent.toString());
+          document.write("<tr><td>");
+        }
+
+  
+    </div>
+</body>
+<html>
